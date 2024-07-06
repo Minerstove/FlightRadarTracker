@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/36732119/how-to-setup-gitignore-for-windows
+
+https://stackoverflow.com/questions/54445033/how-to-use-node-modules-on-a-traditional-website#54447351
+https://stackoverflow.com/questions/18128863/should-node-modules-folder-be-included-in-the-git-repository
+https://stackoverflow.com/questions/43469150/how-to-use-node-modules-on-github-pages-without-uploading-to-repo
+
