@@ -18,8 +18,24 @@ async function airlineList(){
     return 0;
 }
 
+async function flightsearcherByICAO(){
+    const writeStream = fs.createWriteStream('flights.txt');
+    let flights = await frApi.getFlights("PAL");
+    console.log(flights);
+    flights.forEach(value => writeStream.write(`${JSON.stringify(value)}\n`));
+    writeStream.on('finish', ()=> {
+        console.log('wrote all the array data to file Airlines.txt');
+    });
+    writeStream.on('error', (err) => {
+        console.error(`There is an error writing the file Airlines.txt => ${err}`)
+    });
+    writeStream.end();
+    console.log(flights[1].latitude)
+    return 0;
+}
 
-airlineList();
+flightsearcherByICAO();
+//airlineList();
 
     //fs.writeFile('Airlines.txt',airlines,(err)=>{if (err) throw err;}) data cannot be an array therefore
     
